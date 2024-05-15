@@ -129,16 +129,16 @@
             let total = "";
             switch (operator) {
                 case '*':
-                    total *= total parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
+                    total *=  parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
                     break;
                 case '/':
-                    total /= total * parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
+                    total /=  parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
                     break;
                 case '+':
-                    total += total * parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
+                    total += parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
                     break;
                 case '-':
-                    total -= total * parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
+                    total -= parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
                     break;
                     default:
                      total = parseFloat(calc.current)
