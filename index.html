@@ -124,6 +124,26 @@
             })
 
         }
+        //for calculation function
+        function doCalculation() {
+            let total = "";
+            switch (operator) {
+                case '*':
+                    total *= total parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
+                    break;
+                case '/':
+                    total /= total * parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
+                    break;
+                case '+':
+                    total += total * parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
+                    break;
+                case '-':
+                    total -= total * parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
+                    break;
+                    default:
+                     total = parseFloat(calc.current)
+            }
+        }
 
 
 
@@ -146,7 +166,7 @@
                 <CalcButton value="3" onClick={handleNumber} />
                 <CalcButton className="operator" value="+" />
 
-                <CalcButton value="C" onClick={handleClear}/>
+                <CalcButton value="C" onClick={handleClear} />
                 <CalcButton value="0" onClick={handleNumber} />
                 <CalcButton className="operator" value="=" />
                 <CalcButton className="operator" value="-" />
