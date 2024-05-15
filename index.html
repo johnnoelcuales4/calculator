@@ -110,7 +110,7 @@
 
         const [calc, setCalc] = React.useState({
             current: '0',
-            total: '',
+            total: '0',
             isInitial: true,
             preOp: ''
 
@@ -155,7 +155,7 @@
                     total -= parseFloat(calc.current); // equivalent to  total = total * parseFloat(calc.current);
                     break;
                 default:
-                    total = parseFloat(calc.current)
+                    total = parseFloat(calc.current);
             }
             return total;
         }
